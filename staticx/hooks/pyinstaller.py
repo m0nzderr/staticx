@@ -82,6 +82,8 @@ class PyInstallHook:
         # Silence "you do not have execution permission" warning from ldd
         make_executable(lib)
 
+        # TODO: Audit the library to see if it uses problematic RUNPATH (#172)
+
         # Assume this is a shared library, and
         # try to get any dependencies of this file
         try:

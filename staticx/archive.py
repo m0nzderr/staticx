@@ -114,6 +114,7 @@ class SxArchive:
         The library will be added with its base name.
         Symlinks will also be added and followed.
         """
+        # TODO: Audit the library to see if it uses problematic RUNPATH (#172)
 
         if basename(path) in self._added_libs:
             if exist_ok:
