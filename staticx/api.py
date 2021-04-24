@@ -51,8 +51,6 @@ def generate_archive(orig_prog, copied_prog, interp, tmpdir, extra_libs=None, st
 
         # Add all of the libraries
         for libpath in chain(get_shobj_deps(orig_prog), extra_libs):
-            # TODO: Audit the library to see if it uses problematic RUNPATH (#172)
-
             if strip:
                 # Copy the library to the temp dir before stripping
                 tmplib = os.path.join(tmpdir, basename(libpath))
