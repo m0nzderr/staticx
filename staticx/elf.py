@@ -139,7 +139,7 @@ def get_shobj_deps(path, libpath=[]):
 
     # TODO: Should we use dict(os.environ) instead?
     #       For now, make sure we always pass a clean environment.
-    env = {}
+    env = {'LD_LIBRARY_PATH': os.environ['LD_LIBRARY_PATH']}
 
     if libpath:
         # Prepend to LD_LIBRARY_PATH
